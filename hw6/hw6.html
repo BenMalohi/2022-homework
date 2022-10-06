@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Visualization - Homework 6 - The State of the State of the State </title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+
+
+<body>
+    <div id="overlay"></div>
+    <div id="header-wrap">
+        <header>
+            <h1>The State of the State of the States</h1>
+            <div>Name: Ben Malohi; E-Mail: u1115837@umail.utah.edu; UID: u1115837</div>
+        </header>
+        <span>Grouped by Topic</span>
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
+        <button id="showExtremes" role="button">Show Extremes</button>
+    </div>
+
+    <div class="container">
+        <div class="child" id="chart"></div>
+        <div class="child" id="table">
+            <table id="predictionTable">
+                <thead>
+                    <tr id="columnHeaders">
+                        <th class="main sortable" id="h1"><div class="text">Phrase</div><i class="fas no-display"></i></th>
+                        <th class="main sortable" id="h2"><div class="text">Frequency</div><i class="fas no-display"></i></th>
+                        <th class="main sortable" id="h3"><div class="text">Percentages</div><i class="fas no-display"></i></th>
+                        <th class="main sortable" id="h4" ><div class="text">Total</div><i class="fas no-display"></i></th>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><svg class="svg" id="frequencyAxis"></svg></td>
+                        <td><svg class="svg" id="percentagesAxis"></svg></td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody id="predictionTableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="js/chart.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/table.js"></script>
+</body>
+
+</html>
